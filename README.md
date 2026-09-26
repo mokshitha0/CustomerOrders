@@ -1,68 +1,78 @@
-# Employee Management SQL
+# Customers & Orders SQL
 
-##  Project Overview
+## 📌 Project Overview
 
-This project contains SQL queries for an Employee Management System. It demonstrates how to store, retrieve, filter, group, sort, and analyze employee data using MySQL.
+This project contains SQL queries for analyzing customer and order data using MySQL.
 
-##  Database
+The project demonstrates how to use SQL joins, aggregate functions, grouping, filtering, sorting, and limiting results to perform customer-wise order analysis.
 
-The project uses an Employee table containing employee-related information such as:
+## 🗂️ Database Tables
 
-- Employee name
-- Salary
-- Department
-- City
-- Age
+### Customers
 
-##  SQL Concepts Covered
+The `Customers` table contains:
+
+- `customer_id`
+- `customer_name`
+- `city`
+
+### Orders
+
+The `Orders` table contains:
+
+- `order_id`
+- `customer_id`
+- `amount`
+- `order_date`
+
+The `customer_id` column connects the `Customers` and `Orders` tables.
+
+## 📝 SQL Concepts Covered
 
 - SELECT
+- JOIN
 - WHERE
-- Comparison operators
-- AND / OR
-- IN
-- BETWEEN
-- LIKE
 - GROUP BY
 - HAVING
 - ORDER BY
-- Aggregate functions
-  - COUNT()
-  - AVG()
-  - SUM()
-  - MAX()
-  - MIN()
-- Filtering and sorting
-- Department-wise analysis
-- City-wise analysis
+- LIMIT
+- COUNT()
+- SUM()
+- AVG()
+- MAX()
+- MIN()
 
-##  Queries Included
+## 🔍 Queries Included
 
-The queries cover tasks such as:
+The project includes SQL queries to:
 
-1. Finding the total number of employees in each department.
-2. Finding the average salary in each department.
-3. Finding departments with more than one employee.
-4. Finding the highest and lowest salary in each department.
-5. Finding departments whose average salary is greater than 50,000.
-6. Calculating total salary expenditure for each department.
-7. Sorting employees by salary.
-8. Sorting employees by department and salary.
-9. Finding cities with more than one employee.
-10. Finding the top 3 highest-paid employees.
-11. Performing various employee filtering and analysis operations.
+1. Find the total order amount for each customer.
+2. Find customers who have placed more than 3 orders.
+3. Find the average order amount for each customer.
+4. Find the highest order amount placed by each customer.
+5. Display customers sorted by total purchase amount.
+6. Find customers whose total purchase amount exceeds 10,000.
+7. Display customer names with the total number of orders.
+8. Find the customer who spent the highest amount.
+9. Find the customer who placed the maximum number of orders.
+10. Find customers whose average order amount is greater than 2,000.
+11. Display the top 5 customers based on total purchase amount.
+12. Find the minimum order amount for each customer.
+13. Find customers whose total purchase amount exceeds 5,000.
+14. Display customer-wise total orders and total purchase amount.
+15. Find customers who placed more than 2 orders and spent more than 8,000.
 
-##  Technologies Used
+## 🛠️ Technologies Used
 
 - MySQL
 - SQL
 - Git
 - GitHub
 
-##  Project Structure
+## 📂 Project Structure
 
 ```text
-EmployeeManagement
+CustomersOrders
 │
-├── Empolyeemanagement.sql
+├── CustomersOrders.sql
 └── README.md
